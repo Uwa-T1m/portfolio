@@ -1,146 +1,409 @@
-:root{
-    --main:orangered;
-}
-
-.body{
-    position: relative;
-    width: 100%;
-    height: fit-content;
-}
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-/* Header */
-header{
-    background: var(--main);
-    width: 100%;
+body {
+    background: #333;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+
+.navbar {
+    position: fixed;
+    bottom: 0;
+    border-top-left-radius: 20px;
+    right: 0;
     display: flex;
-    height: fit-content;
-    padding: 25px;
     align-items: center;
     justify-content: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-/* NavBar */
-
-nav{
-    background: var(--main);
-    width: 100%;
-    display: flex;
-    height: fit-content;
-    padding: 25px;
-    align-items: center;
-    justify-content: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    padding: 15px;
+    background-color: #222;
+    z-index: 10;
+    width: 30%;
 }
 
-.logo{
-    height: 100%;
-    display: flex;
-    align-items: center;
-    font-size: 30px;
+.navbar .nav {
+    gap: 20px;
 }
 
-.navigation{
-    display: flex;
-    height: 100%;
-    align-items: center;
-    padding: 0 10px;
-    list-style: none;
-}
 
-.navigation li{
-    margin-inline: 15px;
-    text-align: center;
-    font-size: 20px;
-}
-
-.navigation li a{
-    text-decoration: none;
-    color: #333;
-}
-
-/* Bio */
-
-.bioCon{
-    height: 90vh;
-    width: 90%;
-    margin-top: 10px;
-    color: grey;
-    margin-left: 80px;
-    /* position:absolute; */
-    display: flex;
-    align-items: center;
-    background: url(https://www.w3schools.com/w3images/hamburger.jpg);
-    justify-content: center;
-    flex-direction: column;
-    border-radius: 30px;
-}
-
-.bioHeading{
-    font-size: 60px;
-    text-align: center;
-    margin-top: 30px;
-}
-
-.bioImg{
-    border-radius: 50%;
-    height: 400px;
-    width: 400px;
-}
-
-.bio{
-    padding: 20px;
-}
-
-/* Works */
-
-.workCon{
-    width: 100%;
-    background: var(--main);
+.navbar .nav li a {
     color: white;
-    height: 500px;
-    display: grid;
-    gap: 15px;
-    grid-template-columns: repeat(3,1fr);
+    text-decoration: 0;
 }
 
-.card{
-    height: 400px;
-    /* width: 200px; */
-    text-align: center;
-    display: flex;
-    margin-top: 15px;
-    align-items: center;
-    border-radius: 30px;
-    justify-content: center;
-    border: 1px solid;
-    flex-direction: column;
-}
+/* INFO NAV */
 
-.card img{
-    height: 300px;
-    width: 90%;
-    border-radius: 20px;
-}
-
-footer, footer a{
+.info {
+    background-color: #333;
     width: 100%;
-    height: 30vh;
+    color: white;
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.item {
+    margin: 0 20px;
+    display: flex;
+    gap: 10px;
+}
+
+/* HERO */
+
+.hero {
+    display: flex;
+}
+
+.img {
+    width: 60%;
+    height: 100vh;
+    background: url(IMG_20211121_095922.jpg)center/cover;
+    filter: grayscale(100%);
+    background-repeat: no-repeat;
+}
+
+.text {
+    width: 50%;
+    height: 100vh;
+    background: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* ABOUT */
+
+.abt {
+    margin-top: 60px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    background: #333;
+}
+
+.abt .bioPic {
+    width: 450px;
+    height: 500px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./IMG_20220517_100432.jpg)center/cover;
+}
+
+.abt span {
+    font: italic small-caps bold 20px monospace;
+}
+
+/* SKILLS */
+
+.skills {
+    width: 100%;
+    height: 100vh;
+    background: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.skills .card-holder {
+    display: flex;
+    width: 100%;
+    height: 40vh;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.card-holder .box {
+    width: 40%;
+    /* border: 1px solid #fff; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all linear 0.5s;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #fff;
+}
+
+.card-holder .box:hover {
+    transform: scale(1.3);
+    border: 0;
+}
+
+
+.card-holder .box i {
+    font-size: 75px;
+}
+
+.card-holder .box .fa-html5 {
+    color: orangered;
+}
+
+.card-holder .box .fa-css3-alt {
+    color: cyan;
+}
+
+.card-holder .box .fa-react {
+    color: cornflowerblue;
+}
+
+.card-holder .box .fa-js {
+    color: yellow;
+}
+
+.card-holder .box .fa-database {
+    color: purple;
+}
+
+.card-holder .box .fa-pen {
+    color: orange;
+}
+
+/* PROJECTS */
+
+.projects {
+    width: 100%;
+    height: 100vh;
+    background: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.projects .card-holder{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects .card-holder .card{
+    height: 400px;
+    width: 60%;
+    background: url(./calculator.png)center/cover;
+}
+
+.projects .card-holder .card:nth-of-type(2){
+    background: url(./school.png)center/cover;
+}
+
+.projects .card-holder .card:nth-of-type(3){
+    background: url(./shopping.png)center/cover;
+}
+
+.projects .card-holder .card:nth-of-type(4){
+    background: url(./event.png)center/cover;
+}
+
+.projects .card-holder .card:nth-of-type(5){
+    background: url(./music\ class.png)center/cover;
+}
+
+.projects .card-holder .card:nth-of-type(6){
+    background: url(./justcode.png)center/cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background:linear-gradient(#00000080,#00000080);
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:0;
+    transition: .5s ease;
+  }
+  
+  .card:hover .overlay {
+    top: 0;
+    height: 100%;
+  }
+  
+.contact{
+    height: 60vh;
+    margin-top: 110pc;
+    width: 100%;
+    font-weight: 400;
     background: #333;
     color: white;
     text-align: center;
-    text-decoration: none;
+}
+
+.contact-card-holder{
+    width: 100%;
+    padding: 20px 0;
+    height: inherit;
+    display: flex;
+    gap: 45px;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-card-holder .contact-card{
+    padding: 30px;
+    gap: 20px;
+    border-bottom: 2px solid #fff;
+    transition: 0.3s;
+    background: green;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1),inset -5px -5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card:hover{
+    border-top: 2px solid #fff;
+    border-bottom: 0;
+    
+}
+
+.contact-icon{
+    font-size: 30px;
+}
+
+.contact-card:nth-of-type(2){
+    background: royalblue;
 }
 
 
+.contact-card:nth-of-type(3){
+    background: cornflowerblue;
+}
 
+/*  MEDIA QUERIES */
+@media(max-width:240px) {
+    .navbar {
+        width: 100%;
+    }
+
+    .navbar .nav {
+        display: flex;
+    }
+
+    .skills .card-holder {
+        /* display: flex; */
+        width: 100%;
+        height: 150vh;
+        /* margin-top: 15pc; */
+        gap: 15px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .projects{
+        margin-top: 200vh;
+    }
+}
+
+@media(max-width:600px) {
+
+    /* INFO NAV */
+
+    .info {
+        display: none;
+    }
+
+    .item {
+        margin: 0 20px;
+        display: flex;
+        gap: 10px;
+    }
+
+    /* HERO */
+
+    .hero {
+        display: flex;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .img {
+        width: 100%;
+        height: 50vh;
+        background: url(IMG_20211121_095922.jpg)center/cover;
+        filter: grayscale(100%);
+        background-repeat: no-repeat;
+    }
+
+    .text {
+        width: 100%;
+        height: 50vh;
+        background: #333;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .abt .bioPic {
+        transform: scale(1.3);
+        width: 150px;
+        height: 200px;
+    }
+
+    .skills .card-holder {
+        display: flex;
+        width: 100%;
+        height: 150vh;
+        gap: 15px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    /* PROJECTS */
+
+    .projects{
+        margin-top: 100vh;
+    }
+
+    .projects .card-holder{
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+    }
+    
+    .projects .card-holder .card{
+        height: 400px;
+        width: 60%;
+        background: url(./calculator-phone.png)center/cover;
+    }
+    
+    .projects .card-holder .card:nth-of-type(2){
+        background: url(./school=phone.png)center/cover;
+    }
+    
+    .projects .card-holder .card:nth-of-type(3){
+        background: url(./shopapp-phone.png)center/cover;
+    }
+    
+    .projects .card-holder .card:nth-of-type(4){
+        background: url(./event-phone.png)center/cover;
+    }
+    
+    .projects .card-holder .card:nth-of-type(5){
+        background: url(./music-phone.png)center/cover;
+    }
+ 
+    
+    .contact-card-holder{
+        flex-direction: column;
+        margin-top: 10pc;
+    }
+}

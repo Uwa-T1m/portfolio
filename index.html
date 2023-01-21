@@ -1,54 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Keywords"
+        content="Uwaechina Chibuokem's Portfolio">
+    <meta name="Description"
+        content="I am a Front End developer with 3 years of experience">
+    <meta property="og:image" content="./IMG_20211121_095922.jpg">
+    <meta property="og:image:type" content="image/jpg">
+    <meta property="og:description"
+        content="My Portfolio">
+    <link rel="stylesheet" href="../../bootstrap-5.2.0/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/FontAwesome.Pro.6.0.0.alpha3/fontawesome6/pro/css/all.css">
+    <!-- <link rel="stylesheet" href="/fontanwome/fontawesome-6/css/all.css"> -->
     <link rel="stylesheet" href="style.css">
-    <title>My PortFolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Big Tims</title>
 </head>
-<body>
-    <section class="body">
-        <!-- The Heaader -->
-        <header>
-            <div class="logo">
-                <h3>myLogo</h3>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <ul class="nav">
+            <li class="nav-item"><a href="#">Home</a></li>
+            <li class="nav-item"><a href="#about">About</a></li>
+            <li class="nav-item"><a href="#skills">Skills</a></li>
+            <li class="nav-item"><a href="#projects">Projects</a></li>
+            <li class="nav-item"><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- INFO  NAV-->
+    <nav class="info">
+        <div class="item">
+            <p><i class="far fa-envelope"></i> chibuokemuwaechina@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +234 906 907 9188</p>
+        </div>
+        <div class="item">
+            <span class="icon"><i class="fab fa-telegram"></i></span>
+            <span class="icon"><i class="fab fa-linkedin"></i></span>
+            <span class="icon"><i class="fab fa-whatsapp"></i></span>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="img"></div>
+        <div class="text">
+            <h3>My Name Is</h3>
+            <h1>Uwaechina Chibuokem</h1>
+        </div>
+    </section>
+
+    <hr style="background: #fff; border: 3px solid #fff;">
+
+    <!-- ABOUT -->
+
+    <section class="abt" id="about">
+        <h1>About Me</h1>
+        <br><br>
+        <div class="bioPic"></div>
+        <br><br>
+        <span>FROM: NIGERIA</span>
+        <span>I am a Front rnd developer with 3 years of experience.</span>
+        <br><br>
+        <a class="btn btn-light" href="" download="./MY CURRICULUM VITAE.pdf">Download Resume</a>
+    </section>
+
+    <br>
+    <hr style="background: #fff; border: 3px solid #fff;">
+    <br>
+
+    <!-- SKILLS -->
+
+    <section class="skills" id="skills">
+        <h1>My Skills</h1>
+        <br><br>
+        <div class="card-holder">
+            <div class="box">
+                <div class="icon"><i class="fab fa-html5"></i></div>
+                <div class="caption">HTML</div>
             </div>
-            
-        </header>
-        
+            <div class="box">
+                <div class="icon"><i class="fab fa-css3-alt"></i></div>
+                <div class="caption">CSS</div>
+            </div>
+            <div class="box">
+                <div class="icon"><i class="fab fa-js"></i></div>
+                <div class="caption">JS</div>
+            </div>
+            <div class="box">
+                <div class="icon"><i class="fab fa-react"></i></div>
+                <div class="caption">REACT</div>
+            </div>
+            <div class="box">
+                <div class="icon"><i class="fas fa-database"></i></div>
+                <div class="caption">SQL</div>
+            </div>
+            <div class="box">
+                <div class="icon"><i class="far fa-pen"></i></div>
+                <div class="caption">UI/UX DESIGN</div>
+            </div>
 
-        <!-- The Navbar -->
-        <nav>
-            <ul class="navigation">
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Book</a></li>
-                <li><a href="">Contact</a></li>
-            </ul>
-        </nav>
+        </div>
+    </section>
 
-        <!-- Landing (Bio) -->
-       <main class="bioCon">
-        <h1 class="bioHeading">New Item On The Menu</h1>
-    <div class="bio">
-        <p>I'm just a guy that codes. Coding and Graphics is my lifestyle Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae provident quisquam iusto illo, eveniet tenetur, enim numquam architecto eligendi animi repellendus dolorem minima optio fugit!</p>
-    </div>
-    </main>
 
-    <!-- Works -->
-    <h1 class="bioHeading">Some of My Works Are:</h1>
-    <main class="workCon">
-        <div class="card"> <img src="https://www.w3schools.com/w3images/wine.jpg" alt=""><h2>Some Pic & Text</h2></div>
-        <div class="card"><img src="https://www.w3schools.com/w3images/popsicle.jpg" alt=""><h2>Some Pic & Text</h2></div>
-        <div class="card"><img src="https://www.w3schools.com/w3images/salmon.jpg" alt=""><h2>Some Pic & Text</h2></div>
-    </main>
+    <!-- PROJECTS -->
+    <section class="projects" id="projects">
+        <hr style="background: #fff; border: 3px solid #fff;">
+        <br><br>
+        <h1>Projects</h1>
+        <br><br>
+        <div class="card-holder">
+            <div class="card">
+                <div class="overlay">
+                    <h3>Calculator App</h3>
+                </div>
+            </div>
+            <div class="card">
+                <div class="overlay">
+                    <h3>School Website</h3>
+                </div>
+            </div>
+            <div class="card">
+                <div class="overlay">
+                    <h3>E-Commerce Website</h3>
+                </div>
+            </div>
+            <div class="card">
+                <div class="overlay">
+                    <h3>Event Planner</h3>
+                </div>
+            </div>
+            <div class="card">
+                <div class="overlay">
+                    <h3>Music Blog</h3>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Footer -->
-<footer>
-  <p>Created by <a href="">Uwaechina Chibuokem Timothy</a></p>  
-</footer>
 
-</section>
+
+    <!-- CONTACT -->
+
+    <section class="contact" id="contact">
+        <hr style="background: #fff; border: 3px solid #fff;">
+        <h1>Contact Me </h1>
+        <h4>If You Need My Service</h4>
+
+
+        <div class="contact-card-holder">
+            <div class="contact-card card">
+                <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                <h5>+234 906 907 9188</h5>
+            </div>
+            <div class="contact-card card">
+                <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+                <h5>Uwaechina Chibuokem</h5>
+            </div>
+            <div class="contact-card card">
+                <div class="contact-icon"><i class="fab fa-telegram"></i></div>
+                <h5> <a href="https://t.me/Code_sergant" target="_blank"
+                        rel="noopener noreferrer">https://t.me/Code_sergant</a></h5>
+            </div>
+            <div class="contact-card card">
+                <div class="contact-icon"><i class="fab fa-envelope"></i></div>
+                <h5>chibuokemuwaechina@gmail.com</h5>
+            </div>
+            <div class="contact-card card">
+                <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                <h5>+234 906 907 9188</h5>
+            </div>
+        </div>
+       
+    </section>
 </body>
+
 </html>
